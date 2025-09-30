@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}
+play video
+{%endblock%}
+
+
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/play.css') }}">
+{% endblock %}
+
+{% block content %}
+
+ <div class="listcontainer">
+    
+        <div class="videolists">
+             
+            <h3>{{videos[0].title}}</h3>
+            <a href=""><video src="{{videos[0].url}}" controls></video></a>
+            
+    
+            <hr>
+
+            <div class="liandcoinfo">
+                    <div class="comment_land">
+                        <img id="likebtn" src="/static/images_folder/like.png" alt="like"><span><p id="likenum">{{total_likes}} likes</p></span>
+                </div>
+                    <div class="like_land">
+                        <span><p id="commentsnum">{{commentcount}} comments</p></span>
+                    </div>
+            </div>
+            <div class="addcommentsmugdi">
+                <input type="text" name="c_input" id="c_input"> <button type="submit" id="addcomment">add</button>
+                <hr>
+                {%for com in comment %}
+                <div class="allcomments">
+                    <a><img src="/static/images_folder/Jack.png" alt=""> <span class="comment_date">{{com.timecreated}}</span></a>
+                    
+                    <div class="prevcomments">
+                        <p class="realcomments">{{com.content}}</p>
+                    </div>
+                    <hr>
+                </div>
+                {% endfor %}
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    <script>
+    const video_id = "{{videos[0].id}}"
+    </script>
+{% endblock %}
+
+{% block scripts %} 
+<script src="{{ url_for('static', filename='js/play.js') }}"></script>
+{% endblock %}

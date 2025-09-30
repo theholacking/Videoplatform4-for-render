@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}
+login
+{%endblock%}
+
+
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="loginforma">
+    <form  id="loginform">
+        <h2>Holciye Portal</h2>
+        <label for="username">username:</label>
+        <input type="text" id="username" placeholder="geli Portal_id" required autocomplete="off"><br>
+        <label for="passhash">password:</label>
+        <input type="text" id="passhash" placeholder="geli pass-ka" required autocomplete="off">
+        <hr>
+        <button class="indexbtn" type="submit">login</button>
+        <button id="signupbtn" type="button">Sign up</button>
+        <p id="result">asc walaalo</p>
+    </form>
+</div>
+{% endblock %}
+
+{% block scripts %} 
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+{% endblock %}
+
+
+
+

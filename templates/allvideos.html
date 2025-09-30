@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %}
+all videos
+{%endblock%}
+
+
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/allvideos.css') }}">
+{% endblock %}
+
+{% block content %}
+<h1 id="toptext">allvideos page</h1>
+<div class="largecontainer">
+    <div class="uploadmotiv">
+        <div class="btnhd">
+            <h1>upload a new video</h1>
+            <button id="uploadbtn">upload</button>
+        </div>
+        <div class="videohd">
+            <a href="#">
+               
+                <video src="{{videos[0].url}}" controls></video>
+                
+            </a>
+            <span>latest video uploaded</span>
+        </div>
+
+    </div>
+    <div class="listcontainer">
+        {% for vid in videos%}
+        <div class="videolists">
+            <h3>{{vid.title}}</h3>
+            <a href="http://127.0.0.1:5050/videos/{{vid.id}}"><video src="{{vid.url}}" ></video></a>
+            <hr>
+            
+            <!-- <div class="liandcoinfo">
+                    <div class="comment_land">
+                        <img  src="/static/images_folder/like.png"><span><p>150 likes</p></span>
+                </div>
+                    <div class="like_land">
+                        <span><p class="commentsnum">{{tirada}} comments</p></span>
+                    </div>
+            </div>
+            <div class="addcommentsmugdi">
+                <input type="text"> <button class="addcomment">add</button>
+                <hr>
+                {% for com in comments%}
+                <div class="allcomments">
+                    <a href=""><img src="/static/images_folder/Jack.png" alt=""> <span class="comment_date">{{com.time}}</span></a>
+                    <div class="prevcomments">
+                        <p class="realcomments">{{com.comment}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+             -->
+        </div>
+        <!-- <div class="videolists">
+            <a href=""><video src="/static/video_folder/foursecond.mp4"></video></a>
+            <div class="liancoinfo">
+                <a href="">
+                    <p id="likes">number of likes</p>
+                    <p id="comments">number of comments</p>
+                </a>
+            </div>
+        </div>
+        <div class="videolists">
+            <a href=""><video src="/static/video_folder/foursecond.mp4"></video></a>
+            <div class="liancoinfo">
+                <a href="">
+                    <p id="likes">number of likes</p>
+                    <p id="comments">number of comments</p>
+                </a>
+            </div>
+        </div> -->
+        {% else %}
+  <p>No videos available.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/allvideos.js') }}"></script>
+{% endblock %}

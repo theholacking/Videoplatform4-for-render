@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}
+upload video
+{%endblock%}
+
+
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/upload.css') }}">
+{% endblock %}
+
+{% block content %} 
+<h1>upload Page</h1>
+<div class="container">
+    <div class="uploadmotiv">
+        <div class="btnhd">
+            <h1>upload a new video</h1>
+            <button id="uploadbtn" type="submit">upload</button>
+            <input type="file" id="choosefile">
+            <input type="text" id="title" required>
+            <p id="checktext">jamac daqare</p>
+        </div>
+        <div class="videohd">
+            <div id="progressbar"></div>
+            <a href="#">
+                <video src="/static/video_folder/foursecond.mp4" id="thepreviewvid" controls width="400" height="400"></video>
+            </a>
+            
+            <span>this is the video u uploaded</span>
+            
+        </div>
+
+    </div>
+    </div>
+{% endblock %}
+
+{% block scripts %} 
+<script src="{{ url_for('static', filename='js/upload.js') }}"></script>
+{% endblock %}

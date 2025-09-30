@@ -1,0 +1,19 @@
+
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+}
+.registorbox{
+    border: 1px solid grey;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.registorbox *{
+    margin: 5px;
+    padding: 1px;
+}

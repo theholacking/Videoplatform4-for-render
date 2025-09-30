@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}video platform{%endblock%}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/thebase.css') }}">
+    {% block styles %} {% endblock %}
+</head>
+
+<body>
+
+    <nav>
+        {% if session.get('username') %}
+        <div class="leftbar">
+            <img src="/static/images_folder/menu.png" alt="🦍" class="menuicon">
+        </div>
+        {% endif %}
+
+        <div class="homebox">
+            <span><a href="http://127.0.0.1:5050/videos">home</a></span>
+            <span><a href="">videos</a></span>
+            <span id="to_dashb"><a>Dashboard</a></span>
+        </div>
+
+        <div class="authbox">
+            {% if session.get('username') %}
+            <button id="logoutBtn" style="padding: 5px 10px;">Logout</button>
+            {% endif %}
+            <span><a href="http://127.0.0.1:5050/loginpage">login</a></span>
+            <span><a href="">signup</a></span>
+        </div>
+
+    </nav>
+    {% if session.get('username') %}
+    <div class="sidebar">
+        <div class="stuff">
+            <div class="profile_image">
+               <a href="http://127.0.0.1:5050/dashboard"> <img src="/static/images_folder/Jack.png" alt="🦍"></a>
+               <!-- <h4>Generale</h4> -->
+            </div>
+            <div class="account_info">
+
+                <a href="http://127.0.0.1:5050/dashboard">
+                    <img src="/static/images_folder/like.png" alt="" class="username">
+                    <p>{{session["username"]}}</p>
+                </a>
+                <a href="http://127.0.0.1:5050/dashboard">
+                    <img src="/static/images_folder/like.png" alt="" class="userpass">
+                    <p>change password</p>
+                </a>
+                <a href="http://127.0.0.1:5050/dashboard">
+                    <img src="/static/images_folder/like.png" alt="" class="usergmail">
+                    <p>change gmail</p>
+                </a>
+                <a href="http://127.0.0.1:5050/dashboard">
+                    <img src="/static/images_folder/like.png" alt="" class="number_of_vids">
+                    <p>check status</p>
+                </a>
+                <a href="http://127.0.0.1:5050/dashboard">
+                    <img src="/static/images_folder/like.png" alt="" class="change_pass_name">
+                    <p>change both</p>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    {% endif %}
+
+
+    {% block content %} {% endblock %}
+
+
+
+    {% block scripts %} {% endblock %}
+    <script src="{{ url_for('static', filename='js/thebase.js') }}"></script>
+</body>
+
+</html>

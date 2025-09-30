@@ -1,0 +1,26 @@
+
+.stuff{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.stuff .profile_image img{
+    width: 50px;
+    border-radius: 50%;
+    margin:10px 0px ;
+}
+.stuff .account_info  {
+    border: 1px outset teal;
+}
+.stuff .account_info a {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-bottom: 15px;
+    /* border: 1px inset teal; */
+    color: rgb(120, 107, 15);
+}
+.stuff .account_info a img{
+    width: 35px;
+    margin-right: 25px;
+}

@@ -1,0 +1,57 @@
+h1{
+     padding-left: 5%;
+}
+
+.container{
+    background-color: #d3e1ed;
+     padding-left: 5%;
+}
+
+.container .uploadmotiv{
+   display:flex;
+   gap: 90px;
+   background-color: white;
+   border: 1px solid grey;
+}
+.btnhd{
+    display: block;
+    margin-left: 15%;
+    border: 1px solid darkblue;
+    
+}
+.btnhd > *{
+ margin-bottom: 5px;
+}
+.btnhd button{
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: bisque;
+    color: blue;
+    padding: 5px;
+}
+.videohd{
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid green;
+}
+#progressbar{
+    position: absolute;
+    left: 50%;
+    width: 0px;
+    height: 8px;
+    background-color: rgb(53, 141, 109);
+    transition: width 1s lineaar;
+}
+.videohd span{
+    padding: 0px 10px;
+   background-color: aqua;
+   margin-right: 15%;
+}
+.container .uploadmotiv video{
+    width:50%;
+    height: 100%;
+}
+.videohd{
+    background: url(/static/video_folder/foursecond.mp4);
+}

@@ -1,0 +1,129 @@
+#toptext{
+    text-align: center;
+}
+.largecontainer{
+    padding-left: 5%;
+    background-color:#f0f8ff;
+}
+.largecontainer .uploadmotiv{
+   display:flex;
+   gap: 90px;
+   background-color: white;
+   border: 1px solid grey;
+}
+.btnhd{
+    display: block;
+    margin-left: 15%;
+    border: 1px solid darkblue;
+}
+.btnhd button{
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: bisque;
+    color: blue;
+    padding: 5px;
+}
+.videohd{
+display: flex;
+
+align-items: center;
+border: 1px solid green;
+}
+.videohd span{
+    padding: 0px 10px;
+   background-color: aqua;
+   margin-right: 15%;
+}
+.largecontainer .uploadmotiv video{
+    width:50%;
+    height: 100%;
+}
+.smallcontainer{
+padding-left: 13%;
+}
+.listcontainer{
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    column-gap:16px;
+    row-gap:30px;
+    
+}
+.videolists {
+    text-align: center;
+    background-color: rgb(16, 179, 151);
+    height: fit-content;
+}
+.videolists a video{
+    width: 100%;
+    max-height: 200px;
+    border-radius: 8px;
+}
+.videolists hr{
+    margin-bottom: 3px;
+    background-color: aqua;
+}
+.videolists_small{
+    padding-left: 15%;
+}
+
+.videolists .liandcoinfo{
+    display: flex;
+    align-items: center;
+   justify-content: space-between;
+    margin-left: 5px;
+}
+.comment_land {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.comment_land img{
+   width:20px ;
+   margin-right: 6px;
+}
+.like_land  :hover{
+    
+    text-decoration: underline;
+}
+
+.addcomments {
+    display: block;
+}
+.addcomments hr {
+    width: 75%;
+    margin-left: 15px;
+}
+.addcomments input{
+    outline: 0;
+    border: none;
+    background-color: rgb(16, 179, 151);
+}
+.addcomments .allcomments{
+    display: block;
+    background-color: aqua;
+}
+.allcomments a {
+    display: inline-flex;
+   justify-content: start;
+   align-items: center;
+}
+.allcomments a img{
+    margin-top: 5px ;
+    margin-right: 20px;
+    width: 30px;
+    border-radius: 50%;
+}
+.allcomments span{ 
+
+}
+
+.addcommentsmugdi.addcomments {
+    display: block;
+}
+.addcommentsmugdi {
+    display: none;
+}
+
+

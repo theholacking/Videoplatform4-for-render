@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}
+profile
+{%endblock%}
+
+
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+{% endblock %}
+
+{% block content %}
+<h1>Dashboard Page</h1>
+        <div class="stuff">
+            <div class="profile_image">
+               <a href="http://127.0.0.1:5050/dashboard"> <img src="/static/images_folder/Jack.png" alt="🦍"></a>
+               <!-- <h4>Generale</h4> -->
+            </div>
+            <div class="account_info">
+
+                <a href="">
+                    <img src="😂" alt="" class="username">
+                    <p>change name</p>
+                </a>
+                <a href="">
+                    <img src="/static/images_folder/like.png" alt="" class="userpass">
+                    <p>change password</p>
+                </a>
+                <a href="">
+                    <img src="/static/images_folder/like.png" alt="" class="usergmail">
+                    <p>change gmail</p>
+                </a>
+                <a href="">
+                    <img src="/static/images_folder/like.png" alt="" class="number_of_vids">
+                    <p>check status</p>
+                </a>
+                <a href="">
+                    <img src="/static/images_folder/like.png" alt="" class="change_pass_name">
+                    <p>change both</p>
+                </a>
+            </div>
+    <!-- <div class="yaa og hee">
+        <div class="profile_image"></div>
+        <div class="account_info">
+            <div class="username">
+                <h4>username : name</h4>
+            </div>
+            <div class="userpass">
+                  <h4>userpass : pass</h4>
+            </div>
+            <div class="usergmail">  
+                <h4>usergmail : gmail</h4>
+            </div>
+            <div class="number_of_vids">
+                  <h4>number of vids : 15</h4>
+            </div>
+        </div>
+        <div class="change_pass"></div>
+    </div> -->
+    <!-- <p>
+    a big sidebar
+    profile pic div with change buttuon
+    account info{
+        username:name
+        userpass:pass
+        usergmail:gmail
+        number of videos uploaded:number
+
+    }
+</p> -->
+{% endblock %}
+
+{% block scripts %} 
+<script src="{{ url_for('static', filename='js/profile.js') }}"></script>
+{% endblock %}

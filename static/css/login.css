@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+   font-family: sans-serif;
+    background-color: beige;
+    /* height: 100vh; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    position: relative;
+}
+
+.loginforma{
+    height: 280px;
+    width: 280px;
+    text-align: center;
+    border: 1px solid grey;
+    padding-top: 5%;
+    /* overflow: hidden; */
+    /* background-color: aqua; */
+    margin-top: 70px;
+    margin-left: 40%;
+}
+
+input{
+    padding: 3px 15px;
+    margin: 5px;
+    margin-bottom: 10px;
+    
+}
+.indexbtn{
+    margin-left: 5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 5px;
+    animation: shah 5s ease ;
+    background-color: rgb(48, 87, 87);
+    color: yellow;
+    border-radius: 5px;
+    border: navy;
+}
+button:hover{
+ transform: scale(1.2);
+}
+@keyframes shah {
+    0%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(360deg);
+    }
+  100%{
+        transform: rotate(0);
+    }
+}
+/* ------------------------------ */
+/* for logged html */
+/* .user-profile {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.profile-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+.profile-label {
+    font-weight: bold;
+    width: 150px;
+}
+.profile-value {
+    flex-grow: 1;
+} */
+
+
