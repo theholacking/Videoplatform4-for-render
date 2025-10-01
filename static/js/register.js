@@ -24,7 +24,7 @@ function tologinpage(){
 async function registerboy(e){
     e.preventDefault();
 
-    const response= await fetch('http://127.0.0.1:5050/register',{
+    const response= await fetch('https://holciye-video-platform.onrender.com/register',{
         method:"POST",
         headers:{"Content-type":"application/json"},
         body:JSON.stringify({username:username.value,email:email.value,passhash:passhash.value})

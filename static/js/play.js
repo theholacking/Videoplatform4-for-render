@@ -24,7 +24,7 @@ commentTriggers.addEventListener("click",  function () {
 
     const comment = c_input.value;
 
-    const response = await fetch(`http://127.0.0.1:5050/videos/${video_id}/addcomment`,{
+    const response = await fetch(`https://holciye-video-platform.onrender.com/${video_id}/addcomment`,{
 
         method : "POST",
         headers:{"Content-Type":"application/json"},
@@ -49,7 +49,7 @@ commentTriggers.addEventListener("click",  function () {
         alert(`comment posted bro ${data.qaanjeerta}`);
     }
 
-
+5050
 
 
    };
@@ -63,7 +63,7 @@ commentTriggers.addEventListener("click",  function () {
   async function suulka(e) {
     e.preventDefault();
     
-   const like_response = await fetch(`http://127.0.0.1:5050/videos/${video_id}/like_blue`,{
+   const like_response = await fetch(`https://holciye-video-platform.onrender.com/${video_id}/like_blue`,{
         method:"POST",
         headers:{"Content-Type":"application/json"}
 

@@ -23,14 +23,14 @@ commentTriggers.forEach(trigger => {
 });
 
 // qeebta kudarista comment cusub ee comment section ka kkkkkkkkkkkkk
-const addcommentbtn = document.querySelectorAll(".addcomment");
-addcommentbtn.forEach(btn => {
-    btn.addEventListener("click", async function (e){
-        e.preventDefault;
-        const response=await fetch("http://127.0.0.1:5050/videos")
+// const addcommentbtn = document.querySelectorAll(".addcomment");
+// addcommentbtn.forEach(btn => {
+//     btn.addEventListener("click", async function (e){
+//         e.preventDefault;
+//         const response=await fetch("https://holciye-video-platform.onrender.com/videos")
         
        
-    })
-});
+//     })
+// });
 
 

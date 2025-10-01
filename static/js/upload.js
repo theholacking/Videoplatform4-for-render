@@ -48,7 +48,7 @@ async function cloudfare(e) {
   formData.append("video", file);
 
  try{ 
-  const response = await fetch("http://127.0.0.1:5050/upload", {
+  const response = await fetch("https://holciye-video-platform.onrender.com/upload", {
     method: "POST",
     body: formData
   });
