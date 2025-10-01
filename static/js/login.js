@@ -8,7 +8,7 @@ const result = document.getElementById("result");
 
 async function signin(e) {
     e.preventDefault();
-    const response = await fetch("http://127.0.0.1:5050/login",
+    const response = await fetch("https://holciye-video-platform.onrender.com/login",
         {
             method: "POST",
             headers: { "Content-Type": "application/json" },
