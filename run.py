@@ -204,7 +204,7 @@ def playvideo(video_id):
 
 
     cur.execute("select * from comments where video_id =%s ",(video_id,))
-    comments, = cur.fetchall()
+    comments = cur.fetchall()
 
     cur.execute("select count(*) from comments where video_id =%s ",(video_id,))
     comments_len, = cur.fetchone()
